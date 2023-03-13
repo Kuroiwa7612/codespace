@@ -6,9 +6,10 @@
     <style>
         .class p {
             font-size: 40px;
-            color: #6091d3;
+            color: black;
             margin: 0;
             padding: 0;
+            font-style: italic;
         }
         .class_name, .class_com, .class_pass, .class_edit, .class_delete {
             padding: 0.5em 1em;
