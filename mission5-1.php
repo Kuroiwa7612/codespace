@@ -116,23 +116,7 @@
             <input class="class_sub" type="submit" name="submit" value="削除">
         </div>
     </form>
-    <?php 
-        //編集実行機能
-        /*if (!empty($_POST["ed_num"]) && !empty($_POST["edit"])) {
-            $id = $_POST["ed_num"];
-            $name = $_POST["name"];
-            $comment = $_POST["comment"];
-            $pass_post = $_POST["pass_post"];
-            $time = date("Y/m/d H:i:s");
-            $sql = "UPDATE tbtest SET name=:name,comment=:comment,pass=:pass_post,time=:time where id=:id";
-            $stmt = $pdo->prepare($sql);
-            $stmt -> bindParam(":name", $name, PDO::PARAM_STR);
-            $stmt -> bindParam(":comment", $comment, PDO::PARAM_STR);
-            $stmt -> bindParam(":pass", $pass_post, PDO::PARAM_STR);
-            $stmt -> bindParam(":time", $time, PDO::PARAM_STR);
-            $stmt -> bindParam(":id", $id, PDO::PARAM_INT);
-            $stmt -> execute();
-        }*/
+    <?php
         
         //新規投稿
         if (!empty($_POST["name"]) && !empty($_POST["comment"]) && !empty($_POST["pass_post"]) and empty($_POST["ed_num"])) {
@@ -149,6 +133,7 @@
             $sql -> execute();     //実行する
             
         } 
+        //編集実行機能
         if (!empty($_POST["name"]) && !empty($_POST["comment"]) && !empty($_POST["pass_post"]) && !empty($_POST["ed_num"])) {
             $id = $_POST["ed_num"];
             $name = $_POST["name"];
